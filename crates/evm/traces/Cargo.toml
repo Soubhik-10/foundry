@@ -30,8 +30,7 @@ alloy-primitives = { workspace = true, features = [
     "rlp",
 ] }
 alloy-sol-types.workspace = true
-revm-inspectors.workspace = true
-
+revm-inspectors = { workspace = true, features = ["js-tracer"] }
 eyre.workspace = true
 futures.workspace = true
 itertools.workspace = true

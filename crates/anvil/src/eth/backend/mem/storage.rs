@@ -579,7 +579,9 @@ impl MinedTransaction {
                     | GethDebugBuiltInTracerType::MuxTracer
                     | GethDebugBuiltInTracerType::FlatCallTracer => {}
                 },
-                GethDebugTracerType::JsTracer(_code) => {}
+                GethDebugTracerType::JsTracer(code) => {
+                    let inspector = JsInspector::new();
+                }
             }
 
             return Ok(NoopFrame::default().into());
